@@ -41,15 +41,3 @@ jobs:
         npm install -g localtunnel
         code-server --bind-addr 127.0.0.1:8040  & lt --port 8040
       image: paperspace/transformers-gpu:0.3.0
-
-# Appendix: Extra details
-#
-# pip3 install updates transformers from the version on the image to the latest
-# This isn't required, but gives access to more models
-# The script fails if "python" is used instead of "python3"
-# Everything here is assumed to be running in the main branch of the repository
-# The generateText job is OK on C5 (CPU) or P4000 (GPU) but will fail on C3,
-# because that instance type has insufficient memory
-# The output dataset used is "demo-dataset", which is auto-generated in Gradient for each team
-# This avoids requiring the creation of an output dataset before the YAML is run
-# The output can be directed elsewhere, provided the alternative output Dataset location has been created
