@@ -7,7 +7,7 @@ jobs:
 
   cloneRepo:
     resources:
-      instance-type: P4000
+      instance-type: C3
     outputs:
       repo:
         type: volume
